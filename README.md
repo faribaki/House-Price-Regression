@@ -1,1 +1,3 @@
-# House-Price-Regression
+This project uses XGBoostRegressor to predict house prices based on features such as the year built, square footage, number of bedrooms, number of bathrooms, and postcode. The dataset is assumed to be preprocessed to handle missing values and categorical data. The postcode column is removed since the latitude column provides more accurate information, allowing us to avoid unnecessary One-Hot Encoding (OHE). Additionally, fields with zero values, such as yr_renovated, indicate that zero was used to replace missing values.
+
+A train-test split of 75% for training and 25% for testing is applied, with the model trained using 80% of the columns' data. Performance is evaluated using common regression metrics like MAE and R² score, achieving an accuracy of 88%. We can also visualize feature importance to see which features play a key role in the predictions.
